@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="tigre" size="10.000000 7.777778" />
+    <ImageTarget name="personaje" size="10.000000 15.029240" />
     <ImageTarget name="elefante2" size="10.000000 10.000000" />
     <ImageTarget name="elefante" size="10.000000 9.529411" />
-    <ImageTarget name="maze" size="10.000000 10.027855" />
   </Tracking>
 </QCARConfig>
