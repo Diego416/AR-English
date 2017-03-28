@@ -71,6 +71,7 @@ namespace Vuforia
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
+			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
 
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
@@ -89,6 +90,11 @@ namespace Vuforia
 				canvas.enabled = true;
 			}
 
+			foreach(AudioSource audio in audioObjects)
+			{
+				audio.Play ();
+			}
+
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
 
@@ -98,6 +104,7 @@ namespace Vuforia
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
+			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
 
             // Disable rendering:
             foreach (Renderer component in rendererComponents)
@@ -115,6 +122,12 @@ namespace Vuforia
 			foreach(Canvas canvas in canvasObjects)
 			{
 				canvas.enabled = false;
+			}
+
+			// Disable audios
+			foreach(AudioSource audio in audioObjects)
+			{
+				audio.Pause ();
 			}
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
