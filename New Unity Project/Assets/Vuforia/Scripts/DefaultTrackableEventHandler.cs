@@ -5,6 +5,7 @@ Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+using IBM.Watson.DeveloperCloud.Widgets;
 
 namespace Vuforia
 {
@@ -19,7 +20,6 @@ namespace Vuforia
         private TrackableBehaviour mTrackableBehaviour;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
-
 
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
@@ -92,7 +92,8 @@ namespace Vuforia
 
 			foreach(AudioSource audio in audioObjects)
 			{
-				audio.Play ();
+				if (audio.name == "AudioTigre")
+					audio.Play ();
 			}
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
@@ -105,6 +106,10 @@ namespace Vuforia
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
 			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
+
+			GameObject go = GameObject.Find("MicWidget");
+			MicrophoneWidget mic = (MicrophoneWidget) go.GetComponent(typeof(MicrophoneWidget));
+			mic.DeactivateMicrophone();
 
             // Disable rendering:
             foreach (Renderer component in rendererComponents)
@@ -127,8 +132,22 @@ namespace Vuforia
 			// Disable audios
 			foreach(AudioSource audio in audioObjects)
 			{
-				audio.Pause ();
+				if (audio.name == "AudioTigre")
+					audio.Pause ();
 			}
+
+
+	
+			/*GameObject btnNoMic = new GameObject();
+
+			GameObject _spawnedObj;
+
+			_spawnedObj =  Instantiate(btnNoMic) as GameObject;
+
+
+			//and somewehre in code ...
+
+			_spawnedObj.SendMessage("OnClick", SendMessageOptions.RequireReceiver);*/
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
         }
