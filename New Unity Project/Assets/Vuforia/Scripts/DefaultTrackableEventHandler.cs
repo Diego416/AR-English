@@ -106,6 +106,7 @@ namespace Vuforia
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
 			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
+			TextMesh[] texts = GetComponentsInChildren<TextMesh>();
 
 			GameObject go = GameObject.Find("MicWidget");
 			MicrophoneWidget mic = (MicrophoneWidget) go.GetComponent(typeof(MicrophoneWidget));
@@ -136,7 +137,11 @@ namespace Vuforia
 					audio.Pause ();
 			}
 
-
+			foreach(TextMesh text in texts)
+			{
+				if (text.name == "txtSpeak")
+					text.text = "";
+			}
 	
 			/*GameObject btnNoMic = new GameObject();
 

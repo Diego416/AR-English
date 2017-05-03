@@ -59,7 +59,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
     [SerializeField]
     private bool m_TimeStamps = false;
     [SerializeField]
-    private int m_MaxAlternatives = 1;
+    private int m_MaxAlternatives = 4;
     [SerializeField]
     private bool m_EnableContinous = false;
     [SerializeField]
@@ -74,6 +74,9 @@ namespace IBM.Watson.DeveloperCloud.Widgets
     /// <summary>
     /// This property starts or stop's this widget listening for speech.
     /// </summary>
+		/// 
+	
+	public string correctText;
     public bool Active
     {
       get { return m_SpeechToText.IsListening; }
@@ -115,6 +118,12 @@ namespace IBM.Watson.DeveloperCloud.Widgets
     /// <summary>
     /// Button handler to toggle the active state of this widget.
     /// </summary>
+
+	public void SetCorrectText(string correct)
+	{
+		correctText = correct;
+	}
+
     public void OnListenButton()
     {
       Active = !Active;
@@ -210,7 +219,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 
 						if (res.final) {
 							AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
-							if (text.Replace(" ", "") == "howareyou") {
+							if (text.Replace(" ", "") == correctText) {
 								foreach (AudioSource audio in audioObjects) {								
 									if (audio.name == "AudioBuena")
 										audio.Play ();
