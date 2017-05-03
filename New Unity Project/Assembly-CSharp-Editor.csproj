@@ -109,6 +109,7 @@
      <None Include="Assets\StreamingAssets\QCAR\Image_Targets.xml" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Watson\ThirdParty\TouchScript\Shaders\DebugMultiplyNoDepthTest.shader" />
+     <None Include="Assets\Horse\SoftAlpha.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\Watson\Examples\ServiceExamples\TestData\test-stt-corpus.txt" />
      <None Include="Assets\StreamingAssets\GoogleStreamingSpeechToTextProgram\Google.Protobuf.xml" />
