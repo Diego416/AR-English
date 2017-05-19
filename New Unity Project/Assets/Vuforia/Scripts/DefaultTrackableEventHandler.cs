@@ -20,7 +20,7 @@ namespace Vuforia
         private TrackableBehaviour mTrackableBehaviour;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
-
+		public string audioName;
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
     
@@ -59,6 +59,11 @@ namespace Vuforia
             }
         }
 
+		public void SetAudioName(string name)
+		{
+			audioName = name;
+		}
+
         #endregion // PUBLIC_METHODS
 
 
@@ -92,7 +97,7 @@ namespace Vuforia
 
 			foreach(AudioSource audio in audioObjects)
 			{
-				if (audio.name == "AudioTigre")
+				if (audio.name == audioName)
 					audio.Play ();
 			}
 
@@ -133,7 +138,7 @@ namespace Vuforia
 			// Disable audios
 			foreach(AudioSource audio in audioObjects)
 			{
-				if (audio.name == "AudioTigre")
+				if (audio.name == audioName)
 					audio.Pause ();
 			}
 

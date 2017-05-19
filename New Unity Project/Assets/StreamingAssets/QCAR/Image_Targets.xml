@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="quiz" size="10.000000 5.263158" />
-    <ImageTarget name="tigre" size="10.000000 7.777778" />
-    <ImageTarget name="personaje" size="10.000000 15.029240" />
+    <ImageTarget name="textCaballo" size="10.000000 3.590308" />
+    <ImageTarget name="Tigre" size="10.000000 4.923440" />
+    <ImageTarget name="textTigre" size="10.000000 6.751337" />
+    <ImageTarget name="textMariposa" size="10.000000 6.671642" />
+    <ImageTarget name="textElefante" size="10.000000 7.744253" />
+    <ImageTarget name="textBallena" size="10.000000 3.980769" />
+    <ImageTarget name="boy" size="10.000000 12.643979" />
+    <ImageTarget name="Mariposa" size="10.000000 6.624685" />
+    <ImageTarget name="elefante" size="10.000000 7.005900" />
+    <ImageTarget name="caballo" size="10.000000 8.461538" />
+    <ImageTarget name="ballena" size="10.000000 6.243094" />
   </Tracking>
 </QCARConfig>

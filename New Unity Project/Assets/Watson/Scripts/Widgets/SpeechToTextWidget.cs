@@ -232,7 +232,13 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 								}
 								UnityEngine.Debug.Log ("Mal, dijo: " + text);
 							}
+							GameObject go = GameObject.Find("MicWidget");
+							MicrophoneWidget mic = (MicrophoneWidget) go.GetComponent(typeof(MicrophoneWidget));
+							mic.DeactivateMicrophone();
 
+							GameObject goText = GameObject.Find("txtSpeak");
+							TextMesh txtSpeak = (TextMesh) goText.GetComponent(typeof(TextMesh));
+							txtSpeak.text = "";
 						}
 				
           }
