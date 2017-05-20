@@ -83,7 +83,6 @@ namespace Vuforia
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
 			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
-			UnityEngine.UI.Toggle[] checks = GetComponentsInChildren<UnityEngine.UI.Toggle>();
 
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
@@ -106,11 +105,6 @@ namespace Vuforia
 			{
 				if (audio.name == audioName)
 					audio.Play ();
-			}
-
-			foreach(UnityEngine.UI.Toggle check in checks)
-			{
-				check.isOn = false;
 			}
 
 			if (question) {
@@ -151,17 +145,14 @@ namespace Vuforia
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
 			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
 			TextMesh[] texts = GetComponentsInChildren<TextMesh>();
-			UnityEngine.UI.Toggle[] checks = GetComponentsInChildren<UnityEngine.UI.Toggle>();
 
 			GameObject go = GameObject.Find("MicWidget");
 			MicrophoneWidget mic = (MicrophoneWidget) go.GetComponent(typeof(MicrophoneWidget));
 			mic.DeactivateMicrophone();
 
-
-			foreach(UnityEngine.UI.Toggle check in checks)
-			{
-				check.isOn = false;
-			}
+			GameObject goR1 = GameObject.Find("Toggle_RFake");
+			UnityEngine.UI.Toggle toggle1 = (UnityEngine.UI.Toggle) goR1.GetComponent(typeof(UnityEngine.UI.Toggle));
+			toggle1.isOn = true;
 
             // Disable rendering:
             foreach (Renderer component in rendererComponents)
