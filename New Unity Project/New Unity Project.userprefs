@@ -1,25 +1,27 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Watson\Scripts\Widgets\SpeechToTextWidget.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs">
     <Files>
-      <File FileName="Assets\Watson\Scripts\Widgets\SpeechToTextWidget.cs" Line="122" Column="2" />
-      <File FileName="Assets\Watson\Scripts\Widgets\MicrophoneWidget.cs" Line="20" Column="38" />
-      <File FileName="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" Line="101" Column="20" />
+      <File FileName="Assets\Watson\Scripts\Widgets\SpeechToTextWidget.cs" Line="246" Column="8" />
+      <File FileName="Assets\Watson\Scripts\Widgets\MicrophoneWidget.cs" Line="1" Column="1" />
+      <File FileName="Assets\Vuforia\Scripts\DefaultTrackableEventHandler.cs" Line="160" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="New Unity Project" expanded="True">
             <Node name="Assembly-CSharp" expanded="True">
+              <Node name="Vuforia" expanded="True">
+                <Node name="Scripts" expanded="True">
+                  <Node name="DefaultTrackableEventHandler.cs" selected="True" />
+                </Node>
+              </Node>
               <Node name="Watson" expanded="True">
                 <Node name="Scripts" expanded="True">
-                  <Node name="Widgets" expanded="True">
-                    <Node name="SpeechToTextWidget.cs" selected="True" />
-                  </Node>
+                  <Node name="Widgets" expanded="True" />
                 </Node>
               </Node>
             </Node>
-            <Node name="Assembly-CSharp-Editor" expanded="True" />
           </Node>
         </State>
       </Pad>

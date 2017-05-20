@@ -21,6 +21,7 @@ namespace Vuforia
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 		public string audioName;
+		public bool question;
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
     
@@ -64,6 +65,11 @@ namespace Vuforia
 			audioName = name;
 		}
 
+		public void SetQuestionBool(bool q)
+		{
+			question = q;
+		}
+
         #endregion // PUBLIC_METHODS
 
 
@@ -77,6 +83,7 @@ namespace Vuforia
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
 			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
+			UnityEngine.UI.Toggle[] checks = GetComponentsInChildren<UnityEngine.UI.Toggle>();
 
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
@@ -101,6 +108,38 @@ namespace Vuforia
 					audio.Play ();
 			}
 
+			foreach(UnityEngine.UI.Toggle check in checks)
+			{
+				check.isOn = false;
+			}
+
+			if (question) {
+				System.Random rnd = new System.Random();
+				int pregunta = rnd.Next(0, 5);
+
+				string[] preguntas = {"Select the correct option", "Select the true option", "What can horses do?", "Whales...", "What do elephants eat?"};
+				string[] respuestas1 = {"Butterflies is a beautiful insect", "Tigers are very slow", "They can gallop", "are flying animals", "Animals"};
+				string[] respuestas2 = {"Butterflies is not a beautiful insect", "Tigers cannot run", "They can trot", "are domesticated animals", "Humans"};
+				string[] respuestas3 = {"Butterflies are a beautiful insect", "Tigers are very fast", "Both are correct", "are aquatic animals", "Plants"};
+
+				GameObject goP = GameObject.Find("txtQuestion");
+				TextMesh txtPregunta = (TextMesh) goP.GetComponent(typeof(TextMesh));
+				txtPregunta.text = preguntas[pregunta];
+
+				GameObject goR1 = GameObject.Find("txtA1");
+				TextMesh txtRespuesta1 = (TextMesh) goR1.GetComponent(typeof(TextMesh));
+				txtRespuesta1.text = respuestas1[pregunta];
+
+				GameObject goR2 = GameObject.Find("txtA2");
+				TextMesh txtRespuesta2 = (TextMesh) goR2.GetComponent(typeof(TextMesh));
+				txtRespuesta2.text = respuestas2[pregunta];
+
+				GameObject goR3 = GameObject.Find("txtA3");
+				TextMesh txtRespuesta3 = (TextMesh) goR3.GetComponent(typeof(TextMesh));
+				txtRespuesta3.text = respuestas3[pregunta];
+
+			}
+
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
         }
 
@@ -112,10 +151,17 @@ namespace Vuforia
 			Canvas[] canvasObjects = GetComponentsInChildren<Canvas>();
 			AudioSource[] audioObjects = GetComponentsInChildren<AudioSource>();
 			TextMesh[] texts = GetComponentsInChildren<TextMesh>();
+			UnityEngine.UI.Toggle[] checks = GetComponentsInChildren<UnityEngine.UI.Toggle>();
 
 			GameObject go = GameObject.Find("MicWidget");
 			MicrophoneWidget mic = (MicrophoneWidget) go.GetComponent(typeof(MicrophoneWidget));
 			mic.DeactivateMicrophone();
+
+
+			foreach(UnityEngine.UI.Toggle check in checks)
+			{
+				check.isOn = false;
+			}
 
             // Disable rendering:
             foreach (Renderer component in rendererComponents)

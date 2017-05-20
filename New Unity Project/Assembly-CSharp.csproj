@@ -424,6 +424,7 @@
      <None Include="Assets\Watson\ThirdParty\TouchScript\Shaders\DebugNoDepthTest.shader" />
      <None Include="Assets\Idle Animations\Idle Package Description.txt" />
      <None Include="Assets\Butterfly (Animated)\Butterfly (Animated).txt" />
+     <None Include="Assets\StreamingAssets\QCAR\Image_Targets.xml" />
      <None Include="Assets\Watson\ThirdParty\HtmlAgilityPack\HtmlAgilityPack.xml" />
      <None Include="Assets\StreamingAssets\GoogleStreamingSpeechToTextProgram\System.Interactive.Async.xml" />
      <None Include="Assets\StreamingAssets\GoogleStreamingSpeechToTextProgram\Google.Apis.Auth.xml" />
@@ -431,7 +432,6 @@
      <None Include="Assets\Watson\ThirdParty\TouchScript\Shaders\DebugMultiplyNoDepthTest.shader" />
      <None Include="Assets\Horse\SoftAlpha.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
-     <None Include="Assets\StreamingAssets\QCAR\Image_Targets.xml" />
      <None Include="Assets\Watson\Examples\ServiceExamples\TestData\test-stt-corpus.txt" />
      <None Include="Assets\StreamingAssets\GoogleStreamingSpeechToTextProgram\Google.Protobuf.xml" />
      <None Include="Assets\StreamingAssets\GoogleStreamingSpeechToTextProgram\Grpc.Auth.xml" />

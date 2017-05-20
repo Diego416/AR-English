@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="question" size="10.000000 9.126214" />
     <ImageTarget name="textCaballo" size="10.000000 3.590308" />
     <ImageTarget name="Tigre" size="10.000000 4.923440" />
     <ImageTarget name="textTigre" size="10.000000 6.751337" />

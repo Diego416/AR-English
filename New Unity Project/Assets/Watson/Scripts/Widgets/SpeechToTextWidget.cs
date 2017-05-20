@@ -77,6 +77,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 		/// 
 	
 	public string correctText;
+	public GameObject goText;
     public bool Active
     {
       get { return m_SpeechToText.IsListening; }
@@ -122,6 +123,11 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 	public void SetCorrectText(string correct)
 	{
 		correctText = correct;
+	}
+
+	public void SetGO(GameObject go)
+	{
+		goText = go;
 	}
 
     public void OnListenButton()
@@ -236,7 +242,6 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 							MicrophoneWidget mic = (MicrophoneWidget) go.GetComponent(typeof(MicrophoneWidget));
 							mic.DeactivateMicrophone();
 
-							GameObject goText = GameObject.Find("txtSpeak");
 							TextMesh txtSpeak = (TextMesh) goText.GetComponent(typeof(TextMesh));
 							txtSpeak.text = "";
 						}
