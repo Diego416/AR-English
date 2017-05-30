@@ -78,6 +78,11 @@ namespace IBM.Watson.DeveloperCloud.Widgets
 	
 	public string correctText;
 	public GameObject goText;
+
+	public string correctTextAudio;
+	public string inputAudio;
+	public string nameInput;
+
     public bool Active
     {
       get { return m_SpeechToText.IsListening; }
@@ -120,6 +125,40 @@ namespace IBM.Watson.DeveloperCloud.Widgets
     /// Button handler to toggle the active state of this widget.
     /// </summary>
 
+
+	public void SetCorrectTextAudio(string correct)
+	{
+		correctTextAudio = correct;
+	}
+
+	public void SetInput(string text)
+	{
+		inputAudio = text;
+	}
+
+	public void SetNameInput(string name)
+	{
+		nameInput = name;
+	}
+
+	public void validate()
+	{
+		GameObject goInput = GameObject.Find(nameInput);
+		InputField inputField = (InputField) goInput.GetComponent(typeof(InputField));
+		string entrada = inputField.text;
+		entrada = entrada.ToLower();
+
+		if (entrada == correctTextAudio) {
+			GameObject go = GameObject.Find ("AudioBuena");
+			AudioSource audioBuena = (AudioSource)go.GetComponent (typeof(AudioSource));
+			audioBuena.Play ();
+		} else {
+			GameObject go2 = GameObject.Find("AudioMala");
+			AudioSource audioMala = (AudioSource) go2.GetComponent(typeof(AudioSource));
+			audioMala.Play ();
+		}
+	}
+
 	public void SetCorrectText(string correct)
 	{
 		correctText = correct;
@@ -138,6 +177,7 @@ namespace IBM.Watson.DeveloperCloud.Widgets
     /// <exclude />
     protected override void Start()
     {
+	  correctTextAudio = "nada";
       base.Start();
 
       if (m_StatusText != null)

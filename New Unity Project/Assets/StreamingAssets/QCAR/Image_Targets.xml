@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="question" size="10.000000 9.126214" />
-    <ImageTarget name="textCaballo" size="10.000000 3.590308" />
-    <ImageTarget name="Tigre" size="10.000000 4.923440" />
-    <ImageTarget name="textTigre" size="10.000000 6.751337" />
-    <ImageTarget name="textMariposa" size="10.000000 6.671642" />
-    <ImageTarget name="textElefante" size="10.000000 7.744253" />
-    <ImageTarget name="textBallena" size="10.000000 3.980769" />
-    <ImageTarget name="boy" size="10.000000 12.643979" />
-    <ImageTarget name="Mariposa" size="10.000000 6.624685" />
-    <ImageTarget name="elefante" size="10.000000 7.005900" />
-    <ImageTarget name="caballo" size="10.000000 8.461538" />
-    <ImageTarget name="ballena" size="10.000000 6.243094" />
+    <ImageTarget name="textTigre" size="10.000000 7.105263" />
+    <ImageTarget name="textMariposa" size="10.000000 5.943993" />
+    <ImageTarget name="textElefante" size="10.000000 5.798016" />
+    <ImageTarget name="textCaballo" size="10.000000 4.190045" />
+    <ImageTarget name="textBallena" size="10.000000 4.168174" />
+    <ImageTarget name="Tigre" size="10.000000 5.865835" />
+    <ImageTarget name="question" size="10.000000 9.128920" />
+    <ImageTarget name="Mariposa" size="10.000000 7.366609" />
+    <ImageTarget name="elefante" size="10.000000 6.944445" />
+    <ImageTarget name="caballo" size="10.000000 8.850574" />
+    <ImageTarget name="boy" size="10.000000 10.142450" />
+    <ImageTarget name="ballena" size="10.000000 6.099195" />
   </Tracking>
 </QCARConfig>
